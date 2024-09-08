@@ -1,0 +1,126 @@
+.pokemon-card{
+    background-color: #ccc;
+    border-radius: 30px;
+}
+
+.image-bg{
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.image-col{
+    position: relative;
+}
+
+.pokemon-image{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    height: 250px;
+    margin: 0 auto;
+    max-height: 250px;
+}
+
+.bubble{
+    position: absolute;
+    background-color: #eee;
+    font-weight: bold;
+    border-radius: 50%;
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    width: 0;
+    height: 0;
+    justify-content: center;
+    box-shadow: 3px 3px 3px #d7d7d7;
+}
+
+.pokemon-height{
+    top: 10px;
+    left: 10px;
+}
+
+.pokemon-weight{
+    top: 10px;
+    right: 10px;
+}
+
+.pokemon-index{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #aaa;
+    top: 0%;
+}
+
+.pokemon-name{
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pokemon-class{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: crimson;
+}
+
+/* Statistics */
+.stat-col {
+    padding: 20px;
+}
+
+.stat-col .attr-name{
+    text-align: end;
+}
+.stat-col .attr-value{
+    font-weight: bold;
+}
+.stat-col .attr-bar{
+    width: 60%;
+}
+
+/* Favorites */
+.favorite-btn{
+    margin: -30px auto 20px auto;
+    width: fit-content;
+}
+
+.in-favorites{
+    background: lightcoral;
+}
+
+.in-favorites .btn{
+    background: white;
+    color: #777;
+}
+
+/* Fix pagination CSS bug */
+#pokemon-pagination nav div:nth-child(1){
+    display: flex;
+   justify-content: center !important;
+}
+
+/* Fix pagination SVG bug */
+#pokemon-pagination svg.w-5.h-5 {
+    width: 20px;
+    height: 20px;
+}
+
+#pokemon-pagination a{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#pokemon-pagination .hidden p{
+    text-align: center;
+    margin: 20px 0;
+}
