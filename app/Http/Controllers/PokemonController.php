@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class PokemonController extends Controller
 {
@@ -29,5 +30,18 @@ class PokemonController extends Controller
         $pokemon->save();
 
         return response()->json(['favorite' => $pokemon->favorite]);
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        if ($query) {
+            $pokemons = Pokemon::where('name', 'LIKE', "%{$query}%")->paginate(12);
+            
+            return view('partials/search', compact('pokemons'));
+        }
+    
+        return response()->json(['message' => 'No Pokémon found'], 404);
     }
 }
