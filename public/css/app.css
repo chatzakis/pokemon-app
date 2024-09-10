@@ -24,6 +24,7 @@
 
 .bubble{
     position: absolute;
+    z-index: 1;
     background-color: #eee;
     font-weight: bold;
     border-radius: 50%;
@@ -51,7 +52,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: bold;
     color: #aaa;
     top: 0%;
@@ -123,4 +124,9 @@
 #pokemon-pagination .hidden p{
     text-align: center;
     margin: 20px 0;
+}
+
+button#searchBtn {
+    width: 120px;
+    margin-left: 10px;
 }

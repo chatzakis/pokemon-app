@@ -21,7 +21,7 @@ class FetchPokemonData extends Command
     {
         $this->info('Fetching Pokémon list...');
 
-        // Fetch the first 1500 Pokémon from PokeAPI (you can adjust the limit as needed)
+        // Fetch the first 1500 Pokémon from PokeAPI
         $response = Http::get('https://pokeapi.co/api/v2/pokemon?limit=1500');
 
         if ($response->successful()) {
@@ -49,7 +49,6 @@ class FetchPokemonData extends Command
                     }
 
                     $stats = collect($details['stats'])->keyBy('stat.name');
-                    // Log::info($stats);
 
                     // Store or update Pokémon data in the database
                     Pokemon::updateOrCreate(
